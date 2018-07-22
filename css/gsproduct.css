@@ -1,0 +1,87 @@
+.title {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  line-height: 40px;
+  font-size: 16px;
+}
+.title .first {
+  height: 100%;
+  padding-right: 40px;
+}
+.title .first li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  background-color: #fff;
+}
+.title .first span {
+  vertical-align: middle;
+}
+.title .search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  line-height: 40px;
+}
+.box-info {
+  background-color: #fff;
+}
+.box-info ul {
+  padding-top: 40px;
+}
+.box-info li {
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  line-height: 40px;
+  border-top: 1px solid #ccc;
+}
+.mui-icon-checkmarkempty {
+  float: right;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: orange;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.hidden {
+  display: none;
+}
+.main li {
+  float: left;
+  height: 250px;
+  background-color: #f1f1f1;
+  width: 50%;
+}
+.main li a {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  background-color: #fff;
+}
+.main li img {
+  width: 174px;
+  height: 174px;
+  display: block;
+  margin: 0 auto;
+}
+.main li .price {
+  font-size: 20px;
+  color: orange;
+  float: left;
+}
+.main li .btn {
+  float: right;
+  padding: 4px 10px;
+  color: #fff;
+  background-color: orange;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brand.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+            </div>
+            <!-- 搜索栏 -->
+            <div class="hero_search">
+                <div class="left">
+                    <input type="text" placeholder="请输入想对比的商品">
+                </div>
+                <button class="right">搜索</button>
+            </div>
+            <!-- 主体列表内容 -->
+            <div class="nav clearfix">
+                <div class="left fl">
+                    <!-- 模板引擎  挖坑-->
+                    <a href="index.html">首页</a>
+                    &gt;
+                    <a href="javascript:;">全部分类</a>
+                    &gt;
+                </div>
+            </div>
+            <!-- tips  -->
+            <div class="tips">
+                <div class="info">哪个牌子好</div>
+            </div>
+            <!-- 列表内容 -->
+            <div>
+                <ul class="brand">
+
+                    <!-- 挖坑 -->
+                </ul>
+            </div>
+
+            <!-- tips  -->
+            <div class="tips">
+                <div class="info">销量排行</div>
+            </div>
+            <!-- 列表内容 -->
+            <div class="list">
+                <ul class="mui-table-view" id="product_list">
+
+                    <!-- 挖坑 -->
+                </ul>
+            </div>
+
+            <!-- tips  -->
+            <div class="tips">
+                <div class="info">最新排行</div>
+            </div>
+            <!-- 评论 common -->
+            <ul class="common">
+               
+            </ul>
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brand.js"></script>
+<!-- 品牌排行 -->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+        <span class="mui-icon mui-icon-forward"></span>
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}">
+            <div class="em">{{i+1}}</div>
+            <div class="brand_title">{{v.brandName}}</div>
+            <p>{{v.brandInfo}}</p>
+        </a>
+    </li>
+    {{ /each}}
+</script>
+
+<!-- 销量列表 -->
+<script type="text/html" id="tpl_content">
+    {{ each result v i}}
+
+    <li class="mui-table-view-cell mui-media" data-id={{v.productId}}>
+        <a href="bijia.html?productid={{v.productId}}">
+            {{@ v.productImg}}
+            <div class="mui-media-body">
+                {{v.productName}}
+                <p class="price">{{v.productPrice}}</p>
+                <span class="star">★★★★★</span>
+                <span class="offer">{{v.productQuote}}</span>
+                <span class="comment">
+                    {{v.productCom}}
+                </span>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="tpl_common">
+    {{each result v i}}
+    <li>
+            <a href="#">
+                <div class="title">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                    <p>JBL  GO  便携式无线蓝牙迷你音响</p>
+                </div>
+                <div class="box">
+                    <div class="name">{{v.comName   }}:
+                        <span class="author"> ★★★★★</span>
+                        <span class="time"> {{v.comTime}}</span>
+                    </div>
+                    <div class="info">
+                        {{v.comContent}}
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each }}
+</script>
+</html>

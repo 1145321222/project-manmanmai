@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <span class="mui-icon mui-icon mui-icon-back"></span>
+                </a>
+                
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+                <h2>省钱控-最新优惠</h2>
+            </div>
+        
+            <!-- 列表内容 -->
+            <div class="list">
+                <ul class="mui-table-view" id="product_list">
+                    
+                    <!-- 挖坑 -->
+                </ul>
+            </div>
+
+            <!-- 分页 page -->
+            <div class="page clearfix">
+                <div class="left">
+                    <button id="prev">上一页</button>
+                </div>
+                <div class="middle">
+                    <select name="select" id="page">
+                        <!-- 完坑 -->
+                       
+                    </select>
+                </div>
+                <div class="right">
+                    <button id="next">下一页</button>
+                </div>
+            </div>
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/moneyctrl.js"></script>
+
+<script type="text/html" id="tpl_content">
+    {{each result v i}}
+    <li class="mui-table-view-cell mui-media">
+        <a href="moneyproduct.html?productid={{v.productId}}" data-id="">
+          {{@v.productImgSm}}
+          <div class="mui-media-body">
+           {{v.productName}}
+            <p class="mui-ellipsis clearfix">
+                {{v.productFrom}} | {{v.productTime}}
+                <span>{{v.productComCount}}</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+</script>
+<script type="text/html" id="template_page">
+
+    <!-- 要使用循环for -->
+    <% for(var i = 1; i <= numPage; i++) {%>
+        <option value="<%= i %>" <%=pageid==i? 'selected': '' %> >
+            <%= i %>/ {{numPage}}</option>
+        <% } %>
+
+</script>
+
+</html>

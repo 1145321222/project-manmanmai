@@ -1,0 +1,31 @@
+.con_list li {
+  float: left;
+  width: 50%;
+  height: 270px;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.con_list .img {
+  height: 140px;
+  width: 140px;
+  margin: 0 auto;
+}
+.con_list .img img {
+  width: 100%;
+  height: 100%;
+}
+.con_list .title {
+  padding-top: 10px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  height: 52px;
+}
+.con_list .discount {
+  height: 30px;
+  line-height: 30px;
+  color: #ff6c00;
+  font-size: 14px;
+}

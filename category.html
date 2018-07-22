@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+            </div>
+            <!-- 搜索栏 -->
+            <div class="hero_search">
+                <div class="left">
+                    <input type="text" placeholder="请输入想对比的商品">
+                </div>
+                <button class="right">搜索</button>
+            </div>
+            <!-- content 主体 -->
+            <div class="content">
+                <ul class="mui-table-view first_ul">
+                    <!--  挖坑-->
+
+                </ul>
+
+            </div>
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+                <!-- 品牌排行 -->
+                <div class="show">
+                    <span>品牌排行</span>
+                    <span class="left fa fa-chevron-circle-right"></span>
+                </div>
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="index.html">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li class="mui-table-view-cell mui-collapse ">
+        <a class="mui-navigate-right first_a" data-id={{v.titleId}} href="#">{{v.title}}</a>
+        <div class="mui-collapse-content 
+        second_ul">
+
+        </div>
+
+    </li>
+
+    {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <a href="productList.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1"> {{v.category}} </a>
+    {{/each}}
+</script>
+
+</html>

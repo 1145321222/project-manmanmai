@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="moneyctrl.html">
+                    <span class="mui-icon mui-icon mui-icon-back"></span>
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+                <h2>凑单品</h2>
+            </div>
+            <div class="title">
+                <span class="mui-icon mui-icon-list search "></span>
+                <ul class="first">
+                    <li>
+                        <a href="javascript:;">
+                            京东
+                            <span class=" mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            地区
+                            <span class=" mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            全部价格
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 第一个列表 -->
+                <div class="box-info">
+                    <ul class="second hidden">
+                       <!-- ======one坑======== -->
+                    </ul>
+                    <!-- 第二个列表 -->
+                    <ul class="third hidden">
+                       <!-- ======two 坑 -->
+                    </ul>
+                    <!-- 第三列表 -->
+                    <ul class="fourth hidden">
+                        <li>
+                            全部价格
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- main 主体商品列表  -->
+            <div class="main">
+                <ul>
+                    
+                   
+                </ul>
+            </div>
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+<script type="text/html" id="tpl_one">
+    {{ each result v i}}
+        <li data-id={{v.shopId}}>
+            <a href="#" >{{v.shopName}}</a>
+            <span></span>
+        </li>
+    {{ /each }}
+</script>
+<script type="text/html" id="tpl_two"> 
+    {{each result v i }}
+    <li  data-id={{v.areaId}} >
+        <a href="#">{{v.areaName}}</a>
+        <span></span>
+    </li>
+    {{/each }}
+</script>
+<script type="text/html" id="tpl_product">
+    {{each result v i}}
+    <li>
+        <a href="#">
+            <div class="img">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <div class="desc">
+                {{v.productName}}
+            </div>
+            <div class="btn">去凑单</div>
+            <div class="price">{{v.productPrice}}</div>
+            
+        </a>
+    </li>
+    {{/each}}
+</script>
+</html>

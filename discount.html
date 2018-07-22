@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/discount.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="inlanddiscount.html">
+                    <span class="mui-icon mui-icon mui-icon-back"></span>
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+                <h2>国内折扣</h2>
+            </div>
+            <!-- container 主体内容-->
+            <div class="container">
+                <!-- ==========第一个坑======================= -->
+            </div>
+            <!-- 列表 地方名称 -->
+            <div class="area">
+               <!-- ===========第二个坑============= -->
+            </div>
+            <!-- 购买按钮 -->
+            <div class="buy">
+                <a href="#">前往购买</a>
+            </div>
+            <!-- 广告图片 -->
+            <div class="ad">
+                <img src="./images/mmbweixin2.png" alt="">
+            </div>
+            <div class="comment">
+                <!-- ==========第三个坑============ -->
+            </div>
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/discount.js"></script>
+
+<script type="text/html" id="tpl_container">
+    {{ each result v i }}
+    <h2>{{v.productName}}</h2>
+    <h4>{{v.productPrice}}</h4>
+    <div class="info">
+        <span class="name">{{v.productFrom}}</span>
+        <span class="time">{{v.productTime}}</span>
+        <span class="author">{{v.productTips}}</span>
+    </div>
+    <div class="sub">
+        <div class="img">
+            {{@v.productImg}}
+        </div>
+        <p>{{v.productInfo}}</p>
+        {{@v.productImg}}
+    </div>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="tpl_comment">
+    {{@result[0].productComment}}
+</script>
+</html>

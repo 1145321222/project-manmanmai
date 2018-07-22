@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+            </div>
+            <!-- 搜索栏 -->
+            <div class="hero_search">
+                <div class="left">
+                    <input type="text" placeholder="请输入想对比的商品">
+                </div>
+                <button class="right">搜索</button>
+            </div>
+            <!-- nav 导航 -->
+            <div class="hero_nav">
+                <ul class="clearfix ">
+                    <!-- 挖个坑 -->
+
+                </ul>
+            </div>
+            <!-- 内容 -->
+            <div class="hero_content">
+                <div class="title">
+                    <p>超值折扣推荐</p>
+                    <span class="fa fa-chevron-circle-right"></span>
+                </div>
+                <ul class="info">
+
+                    <!-- 挖坑 -->
+                </ul>
+            </div>
+            <!-- 更多按钮 -->
+            <div class="more">
+                <a href="moneyctrl.html">更多优惠信息 »</a>
+            </div>
+
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+                <!-- 品牌排行 -->
+                <div class="show">
+                    <span>品牌排行</span>
+                    <span class="left fa fa-chevron-circle-right"></span>
+                </div>
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/html" id="tpl">
+    {{ each result v i}}
+    <li>
+        <a href="{{v.titlehref}}">
+            {{@v.img}}
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<script type="text/html" id="tpl2">
+    {{ each result v i }}
+    <li class="clearfix">
+        <a href="moneyproduct.html?productid={{v.productId}}">
+            <div class="info_left">
+                {{@v.productImgSm}}
+            </div>
+            <div class="info_right">
+                <span>{{v.productName}}</span>
+                <span class="price">¥{{v.productPinkage}}</span>
+                <p>
+                    <span class="date">{{v.productFrom}} | {{v.productTime}}</span>
+                    <span class=" comment mui-icon mui-icon mui-icon-chat">{{v.productComCount}}</span>
+                </p>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+</html>

@@ -1,0 +1,166 @@
+.hero_header {
+  background-color: #e4393c;
+}
+.nav .mui-scroll {
+  height: 42px !important;
+}
+.nav .mui-scroll .mui-active {
+  color: #e4393c !important;
+  height: 36px;
+  border-bottom: 2px solid #e4393c !important;
+}
+.content ul {
+  background-color: #f7f7f7;
+}
+.content ul li {
+  height: 150px;
+  padding: 10px 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.content ul li > a {
+  display: block;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+}
+.content ul li .pic {
+  height: 130px;
+  width: 135px;
+  float: left;
+}
+.content ul li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.content ul li .inf {
+  overflow: hidden;
+}
+.content ul li .inf .i .t {
+  height: 28px;
+  line-height: 28px;
+}
+.content ul li .inf .i .pr {
+  height: 28px;
+  line-height: 28px;
+  color: #fc353a;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.content ul li .inf .i .pr i {
+  font-size: 16px;
+  margin-right: 5px;
+  font-style: normal;
+}
+.content ul li .inf .i .pr em {
+  font-size: 12px;
+  vertical-align: middle;
+  font-style: normal;
+}
+.content ul li .inf .i .pr del {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #a8a8a8;
+}
+.content ul li .inf .o .bar {
+  margin-top: 10px;
+  position: relative;
+}
+.content ul li .inf .o .bar a {
+  display: block;
+  height: 60px;
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+.content ul li .inf .o .bar i {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: block;
+  height: 14px;
+  width: 82px;
+  border: 1px solid #fc353a;
+  border-radius: 5px;
+  background-color: #ffb7b7;
+  position: relative;
+}
+.content ul li .inf .o .bar i em {
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #fc353a;
+}
+.content ul li .inf .o .bar i span {
+  display: block;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  font-style: normal;
+  line-height: 100%;
+  font-weight: 700;
+  position: absolute;
+}
+.content ul li .inf .o .bar b {
+  overflow: hidden;
+  font-size: 12px;
+  vertical-align: middle;
+  color: #fc353a;
+  font-weight: 400;
+}
+.content ul li .inf .o .b {
+  margin-top: 10px;
+}
+.content ul li .inf .o .b .q {
+  height: 28px;
+  width: 120px;
+  float: left;
+  border: 1px dotted #E4393C;
+}
+.content ul li .inf .o .b .q a {
+  display: block;
+  height: 100%;
+  line-height: 26px;
+  text-align: center;
+  font-size: 12px;
+  color: #e4393c;
+}
+.content ul li .inf .o .b .g {
+  float: right;
+  margin-right: 10px;
+  background-color: #FF5E5D;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.content ul li .inf .o .b .g a {
+  color: #fff;
+  z-index: 1;
+}
+.link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 34px;
+}
+.link a {
+  float: left;
+  display: block;
+  width: 33.33%;
+  text-align: center;
+  height: 100%;
+  line-height: 34px;
+  border: 1px solid #c4c4c4;
+  border-left: none;
+}
+.link a:last-child {
+  border-right: none;
+}
+.link a img {
+  display: inline-block;
+  height: 15px;
+}

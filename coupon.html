@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/coupon.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <span class="mui-icon mui-icon mui-icon-back"></span>
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+                <h2>优惠券</h2>
+            </div>
+            <div class="main">
+                <ul class="clearfix">
+        
+                  <!-- 模板引擎 -->
+                </ul>
+            </div>
+
+            <!-- 商品内容 content -->
+
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/coupon.js"></script>
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+        <a href="{{v.couponLink}}?couponid={{v.couponId}}">
+            <img src="{{v.couponImg}}" alt="">
+            {{v.couponTitle}}
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
+</head>
+
+<body>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 头部 -->
+            <div class="hero_header">
+                <a class="left" href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+
+                <div class="right">
+                    <img src="./images/header_app.png" alt="">
+                </div>
+            </div>
+            <!-- 搜索栏 -->
+            <div class="hero_search">
+                <div class="left">
+                    <input type="text" placeholder="请输入想对比的商品">
+                </div>
+                <button class="right">搜索</button>
+            </div>
+            <!-- 主体列表内容 -->
+            <div class="nav clearfix">
+                <div class="left fl">
+                    <!-- 模板引擎  挖坑-->
+                    <a href="index.html">首页</a>
+                    &gt;
+                    <a href="javascript:;">全部分类</a>
+                    &gt;
+                </div>
+            </div>
+            <!-- tips  -->
+            <div class="tips">
+                <div class="info">热门品牌分类</div>
+            </div>
+            <!-- 列表内容 -->
+            <div class="list">
+                <ul>
+                    
+                    <!-- 挖坑 -->
+                </ul>
+            </div>
+
+            <!-- 分页 page -->
+
+            <!-- 底部公共的模块 -->
+            <div class="hero_footer">
+
+                <!-- 链接 -->
+                <div class="link clearfix">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class=" top fa fa-hand-o-up">返回顶部</a>
+                </div>
+                <!-- 底部文字 -->
+                <div class="footer">
+                    <p>
+                        <a href="#" class="app">手机APP下载</a>
+                        <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-1.12.4.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brandTitle.js"></script>
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}" data-id={{v.brandTitleId}}>{{v.brandTitle}}
+            <span class=" mui-icon mui-icon-arrowdown"></span>
+        </a>
+    </li>
+    {{/each }}
+</script>
+
+
+</html>

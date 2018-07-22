@@ -1,0 +1,128 @@
+.container {
+  background-color: #fff;
+  padding: 10px;
+}
+.container h2 {
+  font-size: 20px;
+  color: #5a5a5a;
+  line-height: 40px;
+}
+.container .info {
+  font-size: 12px;
+  line-height: 30px;
+  color: #999;
+}
+.sub p {
+  color: #606060;
+}
+.sub .img img {
+  float: right;
+  top: 50px;
+  right: 50px;
+  width: 120px;
+  height: 120px;
+}
+.sub > img {
+  display: block;
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
+}
+.area {
+  width: 100%;
+  background-color: #fff;
+}
+.area ul {
+  width: 140px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.area ul li {
+  border-bottom: 1px dashed #ccc;
+}
+.area ul a {
+  height: 24px;
+  width: 100%;
+  display: block;
+}
+.area ul a span {
+  padding: 0 5px;
+  display: block;
+}
+.area ul a strong {
+  color: #f27b04;
+  float: right;
+}
+.buy {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: #fff;
+}
+.buy a {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  height: 30px;
+  border-radius: 10px;
+  background-color: orange;
+  text-align: center;
+  line-height: 30px;
+}
+.ad {
+  padding-top: 20px;
+  background-color: #fff;
+}
+.ad img {
+  width: 100%;
+  display: block;
+}
+.comment {
+  padding: 10px;
+  background-color: #fff;
+}
+.comment .tit {
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 0;
+}
+.comment .form {
+  border: 2px solid #eceae8;
+  overflow: hidden;
+}
+.comment input[type="submit"] {
+  background-color: #FF841D;
+  float: right;
+  border: 0;
+}
+.comment .list ul {
+  width: 100%;
+}
+.comment .list li {
+  padding: 20px 0;
+  position: relative;
+}
+.comment .userimg {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+.comment .userimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.comment .con {
+  padding-left: 50px;
+  font-size: 14px;
+}
+.comment .con .username {
+  float: left;
+  color: #5997c0;
+}
+.comment .con .time {
+  float: right;
+}
